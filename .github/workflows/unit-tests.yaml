@@ -7,5 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install node modules
         run: npm Install
-      - name: Run unit Tests
+      - name: Run unit tests
         run: npm run test
