@@ -8,6 +8,7 @@ import {
 
 import { atLeast10charsLong } from "./password-utils.js";
 import { isEqual } from "./is-equal.js";
+import { togglePasswords } from "./event-utils.js";
 
 const inputPW1 = document.querySelector("#pw1");
 const inputPW2 = document.querySelector("#pw2");
@@ -21,6 +22,8 @@ const length = document.querySelector("#length");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", function () {
+  togglePasswords(inputPW1, inputPW2, btn);
+  /*
   if (inputPW1.getAttribute("type") === "password") {
     inputPW1.setAttribute("type", "text");
     inputPW2.setAttribute("type", "text");
@@ -30,6 +33,7 @@ btn.addEventListener("click", function () {
     inputPW2.setAttribute("type", "password");
     btn.innerText = "Show Passwords";
   }
+  */
 });
 
 inputPW1.addEventListener("keyup", checkPasswords);
